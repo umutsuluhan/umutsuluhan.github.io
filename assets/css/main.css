@@ -1,12 +1,3 @@
-/*
- * Author: Carlos Alvarez
- * URL: http://alvarez.is
- *
- * Project Name: FLATTY - Free Bootstrap 3 Theme
- * Version: 1.0
- * URL: http://blacktie.co
- */
-
 body {
   background-color: #f2f2f2;
     font-family: 'Lato', sans-serif;
@@ -26,7 +17,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 40px;
+    font-size: 40px;
+    text-align:center;
 }
 
 h3 {
@@ -35,7 +27,7 @@ h3 {
 }
 
 h4 {
-	color: #95a5a6;
+	color: rgb(65, 32, 6);
 	font-weight: 400;
 	font-size: 20px;
 }
@@ -89,8 +81,7 @@ a:after {
 }
 
 .navbar-default {
-	background-color: #3498db;
-	border-color: transparent;
+    background-color: rgb(14, 97, 86);
 }
 
 .navbar-default .navbar-brand {
@@ -123,7 +114,7 @@ i {
 /* HeaderWrap */
 #headerwrap {
 	/* background: url(../img/bg01.jpg) no-repeat center top; */
-	background-color: #3498db;
+    background-color: rgb(14, 97, 86, 0.8);
 	margin-top: -20px;
 	padding-top:200px;
 	background-attachment: relative;
@@ -149,4 +140,9 @@ i {
 	font-size: 45px;
 	font-weight: 300;
 	letter-spacing: 1px;
+}
+
+#ppimage{
+    border: 2px solid;
+    border-color:white;
 }
