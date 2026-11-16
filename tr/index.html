@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>H. Umut Suluhan</title>
+  <meta name="description" content="H. Umut Suluhan, Arizona Üniversitesi Elektrik ve Bilgisayar Mühendisliği doktora adayı. Heterojen donanım için çalışma zamanı sistemleri, zamanlama ve RDMA.">
+  <meta property="og:title" content="H. Umut Suluhan">
+  <meta property="og:description" content="Heterojen donanım için çalışma zamanı sistemleri, zamanlama ve RDMA.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">İçeriğe geç</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Umut Suluhan</a>
+      <nav aria-label="Bölümler">
+        <a href="#experience">Deneyim</a>
+        <a href="#projects">Projeler</a>
+        <a href="#publications">Yayınlar</a>
+        <a href="#awards">Ödüller</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+      <a class="lang-switch" href="../" data-lang="en" hreflang="en" lang="en" title="Switch to English">EN</a>
+      <button class="theme-toggle" type="button" aria-label="Koyu modu aç/kapat" title="Koyu modu aç/kapat">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.4 5.4 0 0 1-9.54-4.98A5.4 5.4 0 0 1 13.36 3.1 9.3 9.3 0 0 0 12 3z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <img class="avatar" src="../avatar.jpg" alt="H. Umut Suluhan'ın fotoğrafı" width="400" height="400">
+      <h1>H. Umut Suluhan</h1>
+      <p class="lede">
+        Heterojen donanımı hızlı ve kullanılabilir kılan çalışma zamanı (runtime) sistemleri ve zamanlama yazılımları geliştiriyorum:
+        FPGA üzerindeki RISC-V SoC'lerden ve CGRA'lardan dağıtık veri işleme için RDMA aktarımına kadar.
+        Arizona Üniversitesi'nde Elektrik ve Bilgisayar Mühendisliği doktoramı tamamlıyorum ve tam zamanlı mühendislik pozisyonları arıyorum.
+      </p>
+      <p class="meta">Doktora mezuniyeti Mayıs 2027 (beklenen) &middot; Tucson, AZ</p>
+      <ul class="links">
+        <li><a href="mailto:suluhanumut@gmail.com">E-posta</a></li>
+        <li><a href="https://github.com/umutsuluhan" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/hasan-umut-suluhan-318127186/" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://scholar.google.com/citations?user=dcYgpdgAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a></li>
+      </ul>
+    </section>
+
+    <section class="wrap" id="experience">
+      <h2>Deneyim</h2>
+
+      <article class="card featured">
+        <div class="card-head">
+          <h3>Yazılım Mühendisliği Stajyeri, Google</h3>
+          <span class="when">Mayıs - Ağu 2026 &middot; Sunnyvale, CA</span>
+        </div>
+        <p class="sub">Apache Spark ve Apache Celeborn için RDMA aktarımı</p>
+        <p>
+          Spark ve Celeborn için, sıfır kopyalı scatter-gather aktarımlarda ana makinenin işletim sistemi çekirdeğini atlayan bir RDMA aktarım katmanı geliştirdim
+          ve bunu ayrı Spark ve Celeborn kümeleri arasında shuffle trafiğini yönlendirecek şekilde ölçeklendirdim.
+          RDMA yolu C++ ile yazıldı ve JNI üzerinden Java/Scala ön yüzüne bağlanıyor; Google Compute Engine sanal makinelerinde RoCE üzerinde çalışıyor.
+        </p>
+        <ul class="stats">
+          <li><b>1,27x</b> daha hızlı dağıtık shuffle (shuffle ağırlıklı temel senaryoda)</li>
+          <li><b>1,10x</b> uçtan uca hızlanma (1TB TPC-DS ve TPC-H)</li>
+          <li><b>2x</b> daha kısa shuffle yazma, <b>1,5x</b> daha kısa okuma süresi</li>
+          <li><b>%67</b> daha az kernel CPU yükü, <b>1,67x</b> daha fazla aktif kullanıcı alanı hesaplaması</li>
+        </ul>
+        <p class="tags">C++ &middot; JNI &middot; Java/Scala &middot; RDMA (RoCE, verbs) &middot; Spark &middot; Celeborn</p>
+        <p class="card-links"><a href="https://github.com/umutsuluhan/celeborn/tree/rdma-0.6.3" rel="noopener">Kod: celeborn <code>rdma-0.6.3</code> dalı</a></p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Lisansüstü Araştırma Görevlisi, Arizona Üniversitesi</h3>
+          <span class="when">Oca 2023 - günümüz &middot; Tucson, AZ</span>
+        </div>
+        <p>
+          Doktora araştırmam, CPU'ları alana özgü hızlandırıcılarla birleştiren heterojen SoC'ler için çalışma zamanı zamanlaması ve kaynak yönetimi üzerine.
+          Birinci yazar olarak bu alanda üç çalışmayı yürüttüm:
+        </p>
+        <ul class="plain">
+          <li><a href="#kpact"><b>K-PACT</b></a> (ICCAD 2025): CGRA'lar ve sistolik diziler üzerinde hesaplama çekirdeklerini (kernel) kümeleyip yerleştirerek nanosaniye ölçeğinde bağlam değiştirmeyi mümkün kılan bir planlama aracı.</li>
+          <li><a href="#riscv-cedr"><b>RISC-V emülasyon ortamı</b></a> (IPDPSW 2024): FPGA üzerinde Linux altında CEDR çalışma zamanını koşturan ve hızlandırıcıları bu işe ayrılmış küçük işlemci çekirdekleriyle yöneten çok çekirdekli bir RISC-V SoC.</li>
+          <li><a href="#pytorch-cedr"><b>PyTorch-to-CEDR</b></a> (AICCSA 2023): değiştirilmemiş PyTorch modellerini, operatörlerini CEDR çalışma zamanı üzerinden yönlendirerek FPGA hızlandırıcılarında çalıştırır.</li>
+        </ul>
+        <p>
+          Bu araştırmanın altında yoğun bir sistem çalışması var. FPGA SoC'lerde Linux'u ayağa kaldırdım (VC707'de RISC-V BOOM ve Rocket, ZCU102'de Arm, VCU128'de MicroBlaze),
+          sabitlenmiş (pinned) bellek ile hızlandırıcılar arasında AXI DMA üzerinden veri taşıyan kullanıcı alanı sürücüleri yazdım ve
+          Alveo U280 üzerinde ML kernel'leri için HLS hızlandırıcıları geliştirdim. Ayrıca yazılımla yeniden yapılandırılabilir heterojen SoC'ler üzerine
+          iki DARPA programında (DSSoC ve PROWESS) çalıştım.
+        </p>
+        <p class="tags">Çalışma zamanı zamanlaması &middot; Heterojen SoC'ler &middot; FPGA (Vivado, Vitis HLS, ILA) &middot; PetaLinux &middot; Buildroot &middot; QEMU</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Lisansüstü Öğretim Asistanı, Arizona Üniversitesi</h3>
+          <span class="when">Ağu 2025 - günümüz &middot; Tucson, AZ</span>
+        </div>
+        <p>
+          Bilgisayar Mimarisi dersi için RISC-V SoC geliştirme üzerine bir Chipyard eğitimi hazırladım (<a href="#chipyard">aşağıya</a> bakın).
+          2026 Güz döneminde Mühendislik Fakültesi'nin Üstün Başarılı ECE Lisansüstü Öğretim Asistanı Ödülü'nü aldım.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Lisans Araştırmacısı, TÜBİTAK</h3>
+          <span class="when">Eyl 2021 - Ara 2022 &middot; Türkiye</span>
+        </div>
+        <p>
+          Çift kameralı, referans tabanlı video süper çözünürlük üzerine çalıştım; çalışma HSTR-Net olarak yayımlandı.
+          Modelin dikkat (attention) mekanizmasını geliştirdim ve modeli NVIDIA Jetson AGX Xavier üzerinde TensorRT ile çalıştırdım.
+        </p>
+        <p class="card-links"><a href="https://github.com/umutsuluhan/HSTRNet" rel="noopener">HSTRNet</a> <a href="https://github.com/umutsuluhan/HSTRNet-Interp" rel="noopener">HSTRNet-Interp</a></p>
+      </article>
+    </section>
+
+    <section class="wrap" id="projects">
+      <h2>Projeler</h2>
+
+      <article class="card featured" id="kpact">
+        <div class="card-head">
+          <h3>K-PACT: uyarlanabilir bağlam değiştirme için kernel planlama</h3>
+          <span class="when">ICCAD 2025</span>
+        </div>
+        <p>
+          Geniş bantlı spektrum algılama, bir CGRA ya da sistolik dizi üzerinde sürekli kernel değiştirmeyi gerektirir ve her kernel'in ikili dosyasını
+          çip dışı bellekten getirmek bu geçişleri yavaşlatır. K-PACT, zamansal olarak bağımsız kernel'leri PE komut belleklerini paylaşacak şekilde kümeler,
+          ardından bu kümeleri PE dizisine yerleştirerek nanosaniye ölçeğinde bağlam değiştirme sağlar. Problemi bağlam değiştirme yükü, zamanlama gecikmesi
+          ve veri akışı üzerinden çok amaçlı bir optimizasyon problemi olarak formüle ettim.
+        </p>
+        <p>DS3 simülatöründe, 48 eşzamanlı alt kanalda, ön yüklemesiz temel senaryoya göre:</p>
+        <ul class="stats">
+          <li><b>132,92x</b> daha hızlı alt bant başına yürütme</li>
+          <li><b>207,81x</b> daha az çip dışı ikili dosya getirme</li>
+          <li><b>98,24x</b> daha düşük geçiş süresi</li>
+          <li><b>73,77x</b> daha düşük zamanlama süresi</li>
+        </ul>
+        <p class="tags">CAD &middot; Kümeleme ve yerleştirme &middot; CGRA'lar &middot; Sistolik diziler &middot; DS3</p>
+        <p class="card-links">
+          <a href="https://doi.org/10.1109/ICCAD66269.2025.11240855" rel="noopener">Makale</a>
+          <a href="https://github.com/UA-RCL/K-PACT" rel="noopener">Kod</a>
+        </p>
+      </article>
+
+      <article class="card" id="riscv-cedr">
+        <div class="card-head">
+          <h3>CEDR çalışma zamanı için RISC-V emülasyon ortamı</h3>
+          <span class="when">IPDPSW 2024</span>
+        </div>
+        <p>
+          CEDR heterojen çalışma zamanını, RISC-V çekirdekli ve birden fazla komut kümesi mimarisi (ISA) içeren SoC'lere genişlettim.
+          Virtex-7 VC707 üzerinde üç Xilinx FFT hızlandırıcısına sahip, AXI4-Stream DMA'yı udmabuf üzerinden kullanan ve Debian Linux çalıştıran
+          altı çekirdekli bir RISC-V SoC kurdum (bir BOOM, iki büyük Rocket ve üç sadeleştirilmiş küçük Rocket çekirdeği).
+          Dal tahmini ve FPU'su kaldırılıp önbellekleri küçültülen küçük çekirdekler yalnızca RAM ile hızlandırıcılar arasında veri taşır ve görevlerin ilerleyişini izler.
+        </p>
+        <ul class="stats">
+          <li>Hızlandırıcı yönetim yükünde <b>%47</b>'ye varan azalma (ortalama <b>%31,7</b>)</li>
+          <li>Radar, SAR, Pulse Doppler, WiFi TX ve şerit algılama uygulamalarında <b>2,26x</b>'e varan hızlanma</li>
+        </ul>
+        <p class="tags">RISC-V &middot; Chipyard / Rocket-chip &middot; BOOM &middot; Chisel &middot; Gömülü Linux &middot; MET/EFT/ETF zamanlama</p>
+        <p class="card-links">
+          <a href="https://doi.org/10.1109/IPDPSW63119.2024.00013" rel="noopener">Makale</a>
+          <a href="https://github.com/UA-RCL/CEDR" rel="noopener">Kod</a>
+        </p>
+      </article>
+
+      <article class="card" id="pytorch-cedr">
+        <div class="card-head">
+          <h3>PyTorch-to-CEDR: heterojen SoC'lerde ML modelleri</h3>
+          <span class="when">AICCSA 2023</span>
+        </div>
+        <p>
+          Seçili operatörleri CEDR çalışma zamanına yönlendiren bir PyTorch C++ eklentisi. Böylece değiştirilmemiş bir PyTorch modeli, kullanıcıdan
+          hiçbir donanım bilgisi gerektirmeden FPGA hızlandırıcılarında çalışır; geri kalan her şey PyTorch'un CPU yoluna düşer.
+          Operatör eşlemesi ve bir modelden katman özelliklerini ve veri akış grafiğini çıkararak CEDR uygulamaları üreten araç dahil, sistemi baştan sona ben geliştirdim.
+          HLS ile oluşturulmuş Conv2D ve ZIP hızlandırıcılarına sahip bir Zynq UltraScale+ ZCU102 üzerinde U-Net nesne tespiti, VGG ve konuşma komutu modelleri,
+          sinyal işleme iş yükleriyle birlikte doğruluk kaybı olmadan çalıştı.
+        </p>
+        <p class="tags">PyTorch &middot; C++ &middot; Vitis HLS &middot; ZCU102 &middot; RR/EFT/ETF/HEFT_RT zamanlama</p>
+        <p class="card-links">
+          <a href="https://doi.org/10.1109/AICCSA59173.2023.10479315" rel="noopener">Makale</a>
+          <a href="https://github.com/UA-RCL/CEDR-PyTorch-Backend" rel="noopener">Kod</a>
+        </p>
+      </article>
+
+      <article class="card" id="chipyard">
+        <div class="card-head">
+          <h3>RISC-V SoC tasarımı için Chipyard eğitimi</h3>
+          <span class="when">ECE 462/562</span>
+        </div>
+        <p>
+          Arizona Üniversitesi Bilgisayar Mimarisi dersi için uygulamalı bir eğitim. Tüm teknik bölümleri ben yazdım:
+        </p>
+        <ul class="plain">
+          <li>Verilator simülasyonlu, Docker tabanlı bir Chipyard ve Rocket ortamı</li>
+          <li><code>mcycle</code> ve <code>minstret</code> ile belirli bir kod bölgesi için CPI ölçümü</li>
+          <li>Sekiz donanım performans sayacını okuyan bir benchmark düzeneği: dal, yükleme ve çarpma sayıları, dal tahmin hataları, mul/div beklemeleri, I- ve D-önbellek ıskalamaları</li>
+          <li>Küme sayısı, ilişkisellik ve kapasite üzerinden veri önbelleği duyarlılık deneyleri</li>
+          <li>RoCC hızlandırıcı entegrasyonu ve Rocket'in kod çözme (decode) ve ALU aşamalarına özel bir <code>clamp8</code> komutu ekleme</li>
+        </ul>
+        <p class="card-links"><a href="https://github.com/tosiron/ua-chipyard" rel="noopener">Eğitim deposu</a></p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>MicroBlaze SoC üzerinde PetaLinux</h3>
+          <span class="when">VCU128</span>
+        </div>
+        <p>
+          Xilinx VCU128 üzerinde, betikle oluşturulan bir Vivado blok tasarımından kurulmuş ve AXI DMA ile beslenen bir FFT hızlandırıcısına sahip MicroBlaze SoC.
+          PetaLinux 2024.2'yi özel bir device tree ve U-Boot yapılandırmasıyla ayağa kaldırdım ve kullanıcı alanında çalışan bir C++ FFT/DMA sürücüsü yazdım.
+          Sistem QEMU altında ya da JTAG üzerinden doğrudan kart üzerinde açılıyor.
+        </p>
+        <p class="card-links"><a href="https://github.com/umutsuluhan/vcu128-petalinux" rel="noopener">Kod</a></p>
+      </article>
+    </section>
+
+    <section class="wrap" id="education">
+      <h2>Eğitim</h2>
+      <ul class="plain">
+        <li><b>Doktora, Elektrik ve Bilgisayar Mühendisliği</b>, Arizona Üniversitesi, 2023 - Mayıs 2027 (beklenen)</li>
+        <li><b>Lisans, Bilgisayar Bilimi</b>, Özyeğin Üniversitesi, İstanbul, 2018 - 2023</li>
+      </ul>
+    </section>
+
+    <section class="wrap" id="skills">
+      <h2>Yetkinlikler</h2>
+      <dl class="skills">
+        <dt>Diller</dt><dd>C++, CUDA, C, Python, Java, Scala, Chisel, Bash</dd>
+        <dt>Sistemler</dt><dd>RDMA (RoCE, verbs), kernel-bypass ağ iletişimi, Spark, Celeborn, görev grafiği zamanlama, OpenMP, pthreads, MPI</dd>
+        <dt>Donanım</dt><dd>Heterojen SoC'ler, CGRA'lar, sistolik diziler, RISC-V (Chipyard, Rocket, BOOM), FPGA prototipleme, Vitis HLS, AXI</dd>
+        <dt>Araçlar</dt><dd>Vivado, ILA, perf, gdb, flame graph, Docker, QEMU, PetaLinux, Buildroot, Git, CMake, Slurm</dd>
+      </dl>
+    </section>
+
+    <section class="wrap" id="publications">
+      <h2>Yayınlar</h2>
+      <p class="note">Tam liste için: <a href="https://scholar.google.com/citations?user=dcYgpdgAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>.</p>
+      <h3 class="pub-group">Dergi makaleleri</h3>
+      <ol class="pubs" reversed>
+        <li>
+          <span class="title">CADAS: Communication-Aware Dynamic Scheduler on CGRAs for Large-Volume and Real-Time Processing</span>
+          <span class="authors">J. Lin, <b>H. U. Suluhan</b>, C. Chakrabarti, A. Akoglu, U. Y. Ogras</span>
+          <span class="venue">ACM Transactions on Embedded Computing Systems, 2026 &middot; <a href="https://doi.org/10.1145/3793672" rel="noopener">DOI</a></span>
+        </li>
+        <li>
+          <span class="title">An Overview of Challenges and Requirements for Real-Time Spectrum Sensing in Modern RF Autonomy Systems</span>
+          <span class="authors">J. Lin, <b>H. U. Suluhan</b>, et al.</span>
+          <span class="venue">IEEE Design &amp; Test, 2025</span>
+        </li>
+        <li>
+          <span class="title">HSTR-Net: Reference Based Video Super-Resolution with Dual Cameras</span>
+          <span class="authors"><b>H. U. Suluhan</b>, A. E. Doruk, H. F. Ates, B. K. Gunturk</span>
+          <span class="venue">Machine Vision and Applications, 2025</span>
+        </li>
+        <li>
+          <span class="title">HOPPERFISH: Holistic Profiling with Portable Extensible and Robust Framework Intended for Systems with Heterogeneity</span>
+          <span class="authors">M. Ghanim, S. Gener, <b>H. U. Suluhan</b>, P. Dattilo, A. Akoglu</span>
+          <span class="venue">ACM Transactions on Architecture and Code Optimization, 2025</span>
+        </li>
+        <li>
+          <span class="title">A Portable Framework with Generalized Runtime Features for Task Graph Execution and Concurrent Multi-Application Deployment on Heterogeneous Systems</span>
+          <span class="authors">S. Gener, S. Hassan, <b>H. U. Suluhan</b>, L. Chang, C. Chakrabarti, T.-W. Huang, U. Ogras, A. Akoglu</span>
+          <span class="venue">Future Generation Computer Systems, 2025</span>
+        </li>
+        <li>
+          <span class="title">Coarse Grained Task Parallelization by Dynamic Profiling for Heterogeneous SoC Based Embedded System</span>
+          <span class="authors">L. Chang, S. Gener, J. Mack, <b>H. U. Suluhan</b>, A. Akoglu, C. Chakrabarti</span>
+          <span class="venue">ACM Transactions on Embedded Computing Systems, 2024</span>
+        </li>
+      </ol>
+      <h3 class="pub-group">Konferans bildirileri</h3>
+      <ol class="pubs" reversed>
+        <li>
+          <span class="title">Lightweight Runtime Architecture for Dynamic Heterogeneous Systems</span>
+          <span class="authors">S. Hassan, S. Gener, M. Ghanim, J. Mack, K. Dilber, A. Ukarande, <b>H. U. Suluhan</b>, S. Mysore Srinivasa Murthy, J. Holtom, D. W. Bliss, C. Chakrabarti, U. Ogras, A. Akoglu</span>
+          <span class="venue">IEEE/ACM CODES 2026 &middot; <a href="https://doi.org/10.1109/CODES67670.2026.00067" rel="noopener">DOI</a></span>
+        </li>
+        <li>
+          <span class="title">K-PACT: Kernel Planning for Adaptive Context Switching. A Framework for Clustering, Placement, and Prefetching in Spectrum Sensing</span>
+          <span class="authors"><b>H. U. Suluhan</b>, J. Lin, S. Gener, C. Chakrabarti, U. Ogras, A. Akoglu</span>
+          <span class="venue">IEEE/ACM ICCAD 2025 &middot; <a href="https://doi.org/10.1109/ICCAD66269.2025.11240855" rel="noopener">DOI</a></span>
+        </li>
+        <li>
+          <span class="title">Reconfigurable System Design and Trade Studies for Dynamic Spectral Sensing</span>
+          <span class="authors">A. Dutta, J. Lin, <b>H. U. Suluhan</b>, G. Gubash, U. Y. Ogras, A. Akoglu, B.-P. Paris, D. W. Bliss</span>
+          <span class="venue">Asilomar Conference on Signals, Systems, and Computers, 2025</span>
+        </li>
+        <li>
+          <span class="title">A Runtime Manager Integrated Emulation Environment for Heterogeneous SoC Design with RISC-V Cores</span>
+          <span class="authors"><b>H. U. Suluhan</b>, S. Gener, A. Fusco, J. Mack, I. Dagli, M. Belviranli, C. Edemen, A. Akoglu</span>
+          <span class="venue">IEEE IPDPSW 2024 &middot; <a href="https://doi.org/10.1109/IPDPSW63119.2024.00013" rel="noopener">DOI</a></span>
+        </li>
+        <li>
+          <span class="title">PyTorch and CEDR: Enabling Deployment of Machine Learning Models on Heterogeneous Computing Systems</span>
+          <span class="authors"><b>H. U. Suluhan</b>, S. Gener, A. Fusco, H. F. Ugurdag, A. Akoglu</span>
+          <span class="venue">ACS/IEEE AICCSA 2023 &middot; <a href="https://doi.org/10.1109/AICCSA59173.2023.10479315" rel="noopener">DOI</a></span>
+        </li>
+        <li>
+          <span class="title">CEDR-API: Productive, Performant Programming of Domain-Specific Embedded Systems</span>
+          <span class="authors">J. Mack, S. Gener, S. Hassan, <b>H. U. Suluhan</b>, A. Akoglu</span>
+          <span class="venue">IEEE IPDPSW 2023</span>
+        </li>
+        <li>
+          <span class="title">Dual Camera Based High Spatio-Temporal Resolution Video Generation for Wide Area Surveillance</span>
+          <span class="authors"><b>H. U. Suluhan</b>, H. F. Ates, B. K. Gunturk</span>
+          <span class="venue">IEEE AVSS 2022</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="wrap" id="awards">
+      <h2>Ödüller ve akademik hizmet</h2>
+      <ul class="plain">
+        <li><b>Üstün Başarılı ECE Lisansüstü Öğretim Asistanı Ödülü</b>, Arizona Üniversitesi Mühendislik Fakültesi, Güz 2026</li>
+        <li><b>IEEE Circuits and Systems Öğrenci Seyahat Bursu</b> ve <b>ICCAD 2025 Student Scholar Programı</b>, 2025</li>
+        <li>IEEE Transactions on Sustainable Computing ve IEEE Transactions on Circuits and Systems for Video Technology dahil dokuz IEEE ve Springer dergisinde <b>hakem</b></li>
+        <li><b>Başkan Yardımcısı ve kurucu üye</b>, Türk Öğrenci Derneği, Arizona Üniversitesi, 2024 - günümüz</li>
+      </ul>
+    </section>
+
+    <section class="wrap" id="contact">
+      <h2>İletişim</h2>
+      <p>Bana ulaşmanın en iyi yolu e-posta: <a href="mailto:suluhanumut@gmail.com">suluhanumut@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>&copy; 2026 H. Umut Suluhan</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
